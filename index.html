@@ -1,1 +1,40 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ff0050"><link rel="icon" href="icon-512.png.jpg"><link rel="apple-touch-icon" href="icon-512.png.jpg"><link rel="manifest" href='data:application/json;base64,eyJuYW1lIjoiVmlkZW9MaXRlIFBSTyIsInNob3J0X25hbWUiOiJWaWRlb0xpdGUiLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsImJhY2tncm91bmRfY29sb3IiOiIjMDAwMDAwIiwidGhlbWVfY29sb3IiOiIjZmYwMDUwIiwiaWNvbnMiOlt7InNyYyI6Imljb24tMTkyLnBuZy5qcGciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2U
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VideoLite Riau</title>
+<style>
+body{background:#0f0f0f;color:#fff;font-family:sans-serif;text-align:center;padding:15px}
+video{width:100%;max-width:360px;border-radius:12px;margin:10px 0;border:2px solid #ff0050}
+button{background:#ff0050;color:#fff;border:none;padding:14px 25px;border-radius:30px;font-size:16px;margin:5px;font-weight:bold}
+select,input{padding:10px;border-radius:10px;margin:5px;width:90%;max-width:360px}
+</style>
+</head>
+<body>
+<h2>VideoLite - Couple Tembilahan 🔥</h2>
+<p>Akun: @arifin_.221</p>
+<input type="file" id="vid" accept="video/*"><br>
+<video id="preview" controls></video><br>
+<select id="preset">
+<option value="couple">Preset Couple Galau</option>
+<option value="motor">Preset Motor Inhil</option>
+<option value="daily">Preset Daily Vlog</option>
+</select><br>
+<button onclick="makeFYP()">Bikin FYP Riau 🚀</button>
+<button onclick="exportVid()">Simpan Tanpa Watermark</button>
+<p id="tips" style="color:#ffaa00;margin-top:15px"></p>
+<script>
+let v=document.getElementById('preview');
+document.getElementById('vid').onchange=e=>{v.src=URL.createObjectURL(e.target.files[0]);document.getElementById('tips').innerText='Video siap! Klik Bikin FYP';}
+function makeFYP(){
+let p=document.getElementById('preset').value;
+v.style.filter='brightness(1.15) contrast(1.1) saturate(1.2)';
+v.playbackRate=1.1;
+if(p=='couple'){document.getElementById('tips').innerText='🔥 Caption: mau sebanyak apapun orang... kalo ga ada kamu | Hashtag: #tembilahan #couple #fypriau';}
+if(p=='motor'){document.getElementById('tips').innerText='🏍️ Caption: cek sound motor anak Inhil | Hashtag: #motorriau #inhil #tembilahan';}
+if(p=='daily'){document.getElementById('tips').innerText='☕ Upload jam 19:30 + komen: spill tempatnya?';}
+}
+function exportVid(){alert('✅ Siap upload ke TikTok Lite sekarang!');}
+</script>
+</body>
+  </html>
